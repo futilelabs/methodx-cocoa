@@ -30,4 +30,14 @@
   
 }
 
+- (void) testSetDataNil {
+  
+  MXRequest *request = [[MXRequest alloc] init];
+  
+  request.data = nil;
+  
+  STAssertEqualObjects(request.data, [MXRequest emptyData], @"nil data should be emptyData");
+  
+}
+
 @end

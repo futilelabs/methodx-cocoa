@@ -44,6 +44,18 @@
   
 }
 
+- (void) setData:(id)data {
+  
+  // ensure it's not nil
+  if (data == nil) {
+    data = [MXRequest emptyData];
+  }
+  
+  // set the data
+  _data = data;
+  
+}
+
 + (NSDictionary *)emptyData {
   
   static NSDictionary *emptyData = nil;
