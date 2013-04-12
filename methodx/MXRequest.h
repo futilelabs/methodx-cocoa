@@ -11,8 +11,7 @@
 @interface MXRequest : NSObject
 
 - (id) initWithCommand:(NSString *)command data:(id)data;
-
-+ (NSArray *)requestArrayFromJSONData:(NSData *)json;
+- (id) initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic, copy) NSString *command;
 @property (nonatomic, strong) id data;

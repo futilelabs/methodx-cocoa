@@ -20,41 +20,6 @@
   return self;
 }
 
-+ (NSArray *)requestArrayFromJSONData:(NSData *)json {
-  
-  NSError *error = nil;
-  id data = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments error:&error];
-  
-  if (error != nil) {
-    [NSException raise:@"MXRequestBadJSON" format:@"MXRequest initWithJSONData failed: %@", error];
-  }
-  
-  NSMutableArray *requests = [[NSMutableArray alloc] init];
-  
-  if ([data isKindOfClass:[NSArray class]]) {
-    
-    // collection of objects
-    [(NSArray*)data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-      [requests addObject:[[MXRequest alloc] initWithDictionary:obj]];
-    }];
-    
-  } else if ([data isKindOfClass:[NSDictionary class]]) {
-    
-    // single object
-    [requests addObject:[[MXRequest alloc] initWithDictionary:data]];
-    
-  } else {
-    
-    // other kind of value
-    
-    [NSException raise:@"MXRequestBadData" format:@"Data expected to be either a dictionary or an array of dictionaries, not %@.", [data class]];
-    
-  }
-  
-  return [NSArray arrayWithArray:requests];
-  
-}
-
 - (id) initWithDictionary:(NSDictionary *)dictionary {
   
   // dictionary should have one key

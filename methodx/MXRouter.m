@@ -9,6 +9,7 @@
 #import "MXRouter.h"
 #import "MXSelectorTargetMapping.h"
 #import "MXRequest.h"
+#import "MXRequest+JSON.h"
 
 @interface MXRouter ()
 @property (nonatomic, strong) NSMutableArray *internalMappings;
@@ -76,10 +77,6 @@
   
   return [mapping executeRequest:request];
   
-}
-
-- (NSArray *) executeRequestsInJSON:(NSData *)json {
-  return [self executeRequests:[MXRequest requestArrayFromJSONData:json]];
 }
 
 @end

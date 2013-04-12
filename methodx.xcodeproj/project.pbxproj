@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		055A69161717A29500D9F4B9 /* MXRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A69151717A29500D9F4B9 /* MXRequestTests.m */; };
 		055A691A1717B1A700D9F4B9 /* MXResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A69191717B1A700D9F4B9 /* MXResponseTests.m */; };
+		055A692017189A0800D9F4B9 /* MXRequest+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A691F17189A0800D9F4B9 /* MXRequest+JSON.m */; };
+		055A692417189A6D00D9F4B9 /* MXRouter+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A692317189A6D00D9F4B9 /* MXRouter+JSON.m */; };
+		055A692A17189B4E00D9F4B9 /* MXRequest_JSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A692917189B4E00D9F4B9 /* MXRequest_JSONTests.m */; };
+		055A692D17189C1600D9F4B9 /* MXRouter_JSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A692C17189C1600D9F4B9 /* MXRouter_JSONTests.m */; };
 		058974C2171736B2007C2275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974C1171736B2007C2275 /* Foundation.framework */; };
 		058974D1171736B2007C2275 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974D0171736B2007C2275 /* SenTestingKit.framework */; };
 		058974D3171736B2007C2275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974D2171736B2007C2275 /* UIKit.framework */; };
@@ -53,6 +57,14 @@
 		055A69191717B1A700D9F4B9 /* MXResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXResponseTests.m; sourceTree = "<group>"; };
 		055A691B1718591B00D9F4B9 /* methodx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = methodx.h; sourceTree = "<group>"; };
 		055A691C17185B7B00D9F4B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		055A691E17189A0800D9F4B9 /* MXRequest+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXRequest+JSON.h"; sourceTree = "<group>"; };
+		055A691F17189A0800D9F4B9 /* MXRequest+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXRequest+JSON.m"; sourceTree = "<group>"; };
+		055A692217189A6D00D9F4B9 /* MXRouter+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXRouter+JSON.h"; sourceTree = "<group>"; };
+		055A692317189A6D00D9F4B9 /* MXRouter+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXRouter+JSON.m"; sourceTree = "<group>"; };
+		055A692817189B4E00D9F4B9 /* MXRequest_JSONTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRequest_JSONTests.h; sourceTree = "<group>"; };
+		055A692917189B4E00D9F4B9 /* MXRequest_JSONTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRequest_JSONTests.m; sourceTree = "<group>"; };
+		055A692B17189C1600D9F4B9 /* MXRouter_JSONTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRouter_JSONTests.h; sourceTree = "<group>"; };
+		055A692C17189C1600D9F4B9 /* MXRouter_JSONTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRouter_JSONTests.m; sourceTree = "<group>"; };
 		058974BE171736B2007C2275 /* libmethodx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmethodx.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		058974C1171736B2007C2275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		058974C5171736B2007C2275 /* methodx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "methodx-Prefix.pch"; sourceTree = "<group>"; };
@@ -99,6 +111,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055A691D171899EE00D9F4B9 /* Formats */ = {
+			isa = PBXGroup;
+			children = (
+				055A692117189A5000D9F4B9 /* JSON */,
+			);
+			name = Formats;
+			sourceTree = "<group>";
+		};
+		055A692117189A5000D9F4B9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				055A691E17189A0800D9F4B9 /* MXRequest+JSON.h */,
+				055A691F17189A0800D9F4B9 /* MXRequest+JSON.m */,
+				055A692217189A6D00D9F4B9 /* MXRouter+JSON.h */,
+				055A692317189A6D00D9F4B9 /* MXRouter+JSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		055A692517189B1B00D9F4B9 /* Formats */ = {
+			isa = PBXGroup;
+			children = (
+				055A692617189B2100D9F4B9 /* JSON */,
+			);
+			name = Formats;
+			sourceTree = "<group>";
+		};
+		055A692617189B2100D9F4B9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				055A692817189B4E00D9F4B9 /* MXRequest_JSONTests.h */,
+				055A692917189B4E00D9F4B9 /* MXRequest_JSONTests.m */,
+				055A692B17189C1600D9F4B9 /* MXRouter_JSONTests.h */,
+				055A692C17189C1600D9F4B9 /* MXRouter_JSONTests.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		058974B5171736B2007C2275 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +182,7 @@
 		058974C3171736B2007C2275 /* methodx */ = {
 			isa = PBXGroup;
 			children = (
+				055A691D171899EE00D9F4B9 /* Formats */,
 				055A691B1718591B00D9F4B9 /* methodx.h */,
 				055A69171717A88700D9F4B9 /* Macros.h */,
 				058974F21717378F007C2275 /* MXMapping.h */,
@@ -159,6 +210,7 @@
 		058974D8171736B2007C2275 /* methodxTests */ = {
 			isa = PBXGroup;
 			children = (
+				055A692517189B1B00D9F4B9 /* Formats */,
 				058974D9171736B2007C2275 /* Supporting Files */,
 				058974E9171736CB007C2275 /* MXRouterTests.h */,
 				058974EA171736CB007C2275 /* MXRouterTests.m */,
@@ -283,6 +335,8 @@
 				058974F5171737B1007C2275 /* MXRequest.m in Sources */,
 				058974F8171737C9007C2275 /* MXResponse.m in Sources */,
 				058974FB17173834007C2275 /* MXSelectorTargetMapping.m in Sources */,
+				055A692017189A0800D9F4B9 /* MXRequest+JSON.m in Sources */,
+				055A692417189A6D00D9F4B9 /* MXRouter+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +348,8 @@
 				058974FE1717390E007C2275 /* MXSelectorTargetMappingTest.m in Sources */,
 				055A69161717A29500D9F4B9 /* MXRequestTests.m in Sources */,
 				055A691A1717B1A700D9F4B9 /* MXResponseTests.m in Sources */,
+				055A692A17189B4E00D9F4B9 /* MXRequest_JSONTests.m in Sources */,
+				055A692D17189C1600D9F4B9 /* MXRouter_JSONTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +434,10 @@
 				DSTROOT = /tmp/methodx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "methodx/methodx-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -390,7 +449,10 @@
 				DSTROOT = /tmp/methodx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "methodx/methodx-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -406,6 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "methodx/methodx-Prefix.pch";
 				INFOPLIST_FILE = "methodxTests/methodxTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -421,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "methodx/methodx-Prefix.pch";
 				INFOPLIST_FILE = "methodxTests/methodxTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
