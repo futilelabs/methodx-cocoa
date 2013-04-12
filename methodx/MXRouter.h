@@ -19,6 +19,8 @@
 
 - (id<MXMapping>) firstMappingForRequest:(MXRequest *)request;
 
+- (NSArray *) executeRequests:(NSArray *)requests;
+
 - (MXResponse *) executeRequest:(MXRequest *)request;
 
 - (NSArray *) executeRequestsInJSON:(NSData *)json;

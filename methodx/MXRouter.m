@@ -54,6 +54,18 @@
 
 }
 
+- (NSArray *) executeRequests:(NSArray *)requests {
+  
+  __block NSMutableArray *responses = [[NSMutableArray alloc] init];
+  
+  [requests enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [responses addObject:[self executeRequest:obj]];
+  }];
+  
+  return responses;
+  
+}
+
 - (MXResponse *) executeRequest:(MXRequest *)request {
   
   id<MXMapping> mapping = [self firstMappingForRequest:request];
@@ -67,17 +79,7 @@
 }
 
 - (NSArray *) executeRequestsInJSON:(NSData *)json {
-  
-  // get the requests
-  NSArray *requests = [MXRequest requestArrayFromJSONData:json];
-  __block NSMutableArray *responses = [[NSMutableArray alloc] init];
-  
-  [requests enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-    [responses addObject:[self executeRequest:obj]];
-  }];
-  
-  return responses;
-  
+  return [self executeRequests:[MXRequest requestArrayFromJSONData:json]];
 }
 
 @end

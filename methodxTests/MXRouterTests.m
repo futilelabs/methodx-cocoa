@@ -70,6 +70,7 @@
 
 - (void) testExecuteRequest {
   
+  self.testSelectorCalled = NO;
   MXRouter *router = [[MXRouter alloc] init];
   
   MXSelectorTargetMapping *mapping1 = [[MXSelectorTargetMapping alloc] initWithCommand:@"1" forSelectorName:@"testSelector" onTarget:self];
@@ -84,7 +85,32 @@
   
 }
 
+- (void) testExecuteRequests {
+  
+  self.testSelectorCalled = NO;
+  MXRouter *router = [[MXRouter alloc] init];
+  
+  MXSelectorTargetMapping *mapping1 = [[MXSelectorTargetMapping alloc] initWithCommand:@"1" forSelectorName:@"testSelector" onTarget:self];
+  MXSelectorTargetMapping *mapping2 = [[MXSelectorTargetMapping alloc] initWithCommand:@"2" forSelectorName:@"testSelector2" onTarget:self];
+  
+  [router addMapping:mapping1];
+  [router addMapping:mapping2];
+  
+  NSArray *requests = [NSArray arrayWithObjects:[[MXRequest alloc] initWithCommand:@"1" data:nil], [[MXRequest alloc] initWithCommand:@"2" data:nil], nil];
+  
+  NSArray *responses = [router executeRequests:requests];
+  
+  STAssertTrue(self.testSelectorCalled, @"");
+  STAssertTrue(self.testSelector2Called, @"");
+  STAssertEquals([responses count], (NSUInteger)2, @"Should collect responses");
+
+}
+
 - (void) testExecuteRequestsInJSON {
+  
+  self.testSelectorCalled = NO;
+  self.testSelector2Called = NO;
+  self.testSelector3Called = NO;
   
   MXRouter *router = [[MXRouter alloc] init];
   

@@ -52,6 +52,7 @@
 		055A69181717B1A700D9F4B9 /* MXResponseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXResponseTests.h; sourceTree = "<group>"; };
 		055A69191717B1A700D9F4B9 /* MXResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXResponseTests.m; sourceTree = "<group>"; };
 		055A691B1718591B00D9F4B9 /* methodx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = methodx.h; sourceTree = "<group>"; };
+		055A691C17185B7B00D9F4B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		058974BE171736B2007C2275 /* libmethodx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmethodx.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		058974C1171736B2007C2275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		058974C5171736B2007C2275 /* methodx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "methodx-Prefix.pch"; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		058974B5171736B2007C2275 = {
 			isa = PBXGroup;
 			children = (
+				055A691C17185B7B00D9F4B9 /* README.md */,
 				058974C3171736B2007C2275 /* methodx */,
 				058974D8171736B2007C2275 /* methodxTests */,
 				058974C0171736B2007C2275 /* Frameworks */,
