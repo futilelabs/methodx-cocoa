@@ -1,13 +1,13 @@
 //
-//  methodx.m
+//  MXRequestTests.h
 //  methodx
 //
 //  Created by Mat Ryer on 11/04/2013.
 //  Copyright (c) 2013 futilegames.com. All rights reserved.
 //
 
-#import "methodx.h"
+#import <SenTestingKit/SenTestingKit.h>
 
-@implementation methodx
+@interface MXRequestTests : SenTestCase
 
 @end

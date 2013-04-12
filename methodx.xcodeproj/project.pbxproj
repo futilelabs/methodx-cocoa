@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055A69161717A29500D9F4B9 /* MXRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A69151717A29500D9F4B9 /* MXRequestTests.m */; };
 		058974C2171736B2007C2275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974C1171736B2007C2275 /* Foundation.framework */; };
-		058974C7171736B2007C2275 /* methodx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 058974C6171736B2007C2275 /* methodx.h */; };
-		058974C9171736B2007C2275 /* methodx.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974C8171736B2007C2275 /* methodx.m */; };
 		058974D1171736B2007C2275 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974D0171736B2007C2275 /* SenTestingKit.framework */; };
 		058974D3171736B2007C2275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974D2171736B2007C2275 /* UIKit.framework */; };
 		058974D4171736B2007C2275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974C1171736B2007C2275 /* Foundation.framework */; };
 		058974D7171736B2007C2275 /* libmethodx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058974BE171736B2007C2275 /* libmethodx.a */; };
 		058974DD171736B2007C2275 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 058974DB171736B2007C2275 /* InfoPlist.strings */; };
-		058974E0171736B2007C2275 /* methodxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974DF171736B2007C2275 /* methodxTests.m */; };
+		058974EB171736CB007C2275 /* MXRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974EA171736CB007C2275 /* MXRouterTests.m */; };
+		058974EE1717370F007C2275 /* MXRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974ED1717370F007C2275 /* MXRouter.m */; };
+		058974F5171737B1007C2275 /* MXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974F4171737B1007C2275 /* MXRequest.m */; };
+		058974F8171737C9007C2275 /* MXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974F7171737C9007C2275 /* MXResponse.m */; };
+		058974FB17173834007C2275 /* MXSelectorTargetMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974FA17173834007C2275 /* MXSelectorTargetMapping.m */; };
+		058974FE1717390E007C2275 /* MXSelectorTargetMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 058974FD1717390E007C2275 /* MXSelectorTargetMappingTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,25 +39,36 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				058974C7171736B2007C2275 /* methodx.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		055A69141717A29500D9F4B9 /* MXRequestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRequestTests.h; sourceTree = "<group>"; };
+		055A69151717A29500D9F4B9 /* MXRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRequestTests.m; sourceTree = "<group>"; };
+		055A69171717A88700D9F4B9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		058974BE171736B2007C2275 /* libmethodx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmethodx.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		058974C1171736B2007C2275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		058974C5171736B2007C2275 /* methodx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "methodx-Prefix.pch"; sourceTree = "<group>"; };
-		058974C6171736B2007C2275 /* methodx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = methodx.h; sourceTree = "<group>"; };
-		058974C8171736B2007C2275 /* methodx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = methodx.m; sourceTree = "<group>"; };
 		058974CF171736B2007C2275 /* methodxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = methodxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		058974D0171736B2007C2275 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		058974D2171736B2007C2275 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		058974DA171736B2007C2275 /* methodxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "methodxTests-Info.plist"; sourceTree = "<group>"; };
 		058974DC171736B2007C2275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		058974DE171736B2007C2275 /* methodxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = methodxTests.h; sourceTree = "<group>"; };
-		058974DF171736B2007C2275 /* methodxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = methodxTests.m; sourceTree = "<group>"; };
+		058974E9171736CB007C2275 /* MXRouterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRouterTests.h; sourceTree = "<group>"; };
+		058974EA171736CB007C2275 /* MXRouterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRouterTests.m; sourceTree = "<group>"; };
+		058974EC1717370F007C2275 /* MXRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRouter.h; sourceTree = "<group>"; };
+		058974ED1717370F007C2275 /* MXRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRouter.m; sourceTree = "<group>"; };
+		058974F21717378F007C2275 /* MXMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXMapping.h; sourceTree = "<group>"; };
+		058974F3171737B1007C2275 /* MXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRequest.h; sourceTree = "<group>"; };
+		058974F4171737B1007C2275 /* MXRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRequest.m; sourceTree = "<group>"; };
+		058974F6171737C9007C2275 /* MXResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXResponse.h; sourceTree = "<group>"; };
+		058974F7171737C9007C2275 /* MXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXResponse.m; sourceTree = "<group>"; };
+		058974F917173834007C2275 /* MXSelectorTargetMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSelectorTargetMapping.h; sourceTree = "<group>"; };
+		058974FA17173834007C2275 /* MXSelectorTargetMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSelectorTargetMapping.m; sourceTree = "<group>"; };
+		058974FC1717390E007C2275 /* MXSelectorTargetMappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSelectorTargetMappingTest.h; sourceTree = "<group>"; };
+		058974FD1717390E007C2275 /* MXSelectorTargetMappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSelectorTargetMappingTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +126,17 @@
 		058974C3171736B2007C2275 /* methodx */ = {
 			isa = PBXGroup;
 			children = (
-				058974C6171736B2007C2275 /* methodx.h */,
-				058974C8171736B2007C2275 /* methodx.m */,
+				055A69171717A88700D9F4B9 /* Macros.h */,
+				058974F21717378F007C2275 /* MXMapping.h */,
 				058974C4171736B2007C2275 /* Supporting Files */,
+				058974EC1717370F007C2275 /* MXRouter.h */,
+				058974ED1717370F007C2275 /* MXRouter.m */,
+				058974F3171737B1007C2275 /* MXRequest.h */,
+				058974F4171737B1007C2275 /* MXRequest.m */,
+				058974F6171737C9007C2275 /* MXResponse.h */,
+				058974F7171737C9007C2275 /* MXResponse.m */,
+				058974F917173834007C2275 /* MXSelectorTargetMapping.h */,
+				058974FA17173834007C2275 /* MXSelectorTargetMapping.m */,
 			);
 			path = methodx;
 			sourceTree = "<group>";
@@ -129,9 +152,13 @@
 		058974D8171736B2007C2275 /* methodxTests */ = {
 			isa = PBXGroup;
 			children = (
-				058974DE171736B2007C2275 /* methodxTests.h */,
-				058974DF171736B2007C2275 /* methodxTests.m */,
 				058974D9171736B2007C2275 /* Supporting Files */,
+				058974E9171736CB007C2275 /* MXRouterTests.h */,
+				058974EA171736CB007C2275 /* MXRouterTests.m */,
+				058974FC1717390E007C2275 /* MXSelectorTargetMappingTest.h */,
+				058974FD1717390E007C2275 /* MXSelectorTargetMappingTest.m */,
+				055A69141717A29500D9F4B9 /* MXRequestTests.h */,
+				055A69151717A29500D9F4B9 /* MXRequestTests.m */,
 			);
 			path = methodxTests;
 			sourceTree = "<group>";
@@ -243,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058974C9171736B2007C2275 /* methodx.m in Sources */,
+				058974EE1717370F007C2275 /* MXRouter.m in Sources */,
+				058974F5171737B1007C2275 /* MXRequest.m in Sources */,
+				058974F8171737C9007C2275 /* MXResponse.m in Sources */,
+				058974FB17173834007C2275 /* MXSelectorTargetMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058974E0171736B2007C2275 /* methodxTests.m in Sources */,
+				058974EB171736CB007C2275 /* MXRouterTests.m in Sources */,
+				058974FE1717390E007C2275 /* MXSelectorTargetMappingTest.m in Sources */,
+				055A69161717A29500D9F4B9 /* MXRequestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +435,7 @@
 				058974E5171736B2007C2275 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		058974E6171736B2007C2275 /* Build configuration list for PBXNativeTarget "methodxTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +444,7 @@
 				058974E8171736B2007C2275 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

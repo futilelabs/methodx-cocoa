@@ -1,13 +1,13 @@
 //
-//  methodx.h
+//  MXResponse.h
 //  methodx
 //
 //  Created by Mat Ryer on 11/04/2013.
 //  Copyright (c) 2013 futilegames.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface methodx : NSObject
+@interface MXResponse : NSObject
 
 @end
