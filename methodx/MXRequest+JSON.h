@@ -24,6 +24,11 @@
 + (NSData *)JSONDataForCommand:(NSString *)command andData:(id)data;
 
 /**
+ Generates JSON NSData for the given command.  [MXRequest emptyData] will be used.
+ */
++ (NSData *)JSONDataForCommand:(NSString *)command;
+
+/**
  Generates JSON NSData for the specified requests.
  */
 + (NSData *)JSONDataForRequests:(NSArray *)requests;

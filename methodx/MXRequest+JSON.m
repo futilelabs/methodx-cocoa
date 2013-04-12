@@ -43,6 +43,10 @@
 
 }
 
++ (NSData *)JSONDataForCommand:(NSString *)command {
+  return [MXRequest JSONDataForCommand:command andData:[MXRequest emptyData]];
+}
+
 + (NSData *)JSONDataForCommand:(NSString *)command andData:(id)data {
   
   NSDictionary *commandObject = [[NSDictionary alloc] initWithObjectsAndKeys:data, command, nil];

@@ -56,6 +56,21 @@
   
 }
 
+- (void) testJSONDataForCommand {
+  
+  // make some test objects
+  NSString *command = @"command";
+  
+  // get the JSON data
+  NSData *json = [MXRequest JSONDataForCommand:command];
+  
+  // get the JSON string
+  NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+
+  STAssertTrue([jsonString isEqualToString:@"{\"command\":{}}"], @"JSON string");
+  
+}
+
 - (void) testJSONDataForRequests {
   
   NSDictionary *someData = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mat", @"name", nil];
