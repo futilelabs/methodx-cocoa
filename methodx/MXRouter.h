@@ -21,4 +21,6 @@
 
 - (MXResponse *) executeRequest:(MXRequest *)request;
 
+- (NSArray *) executeRequestsInJSON:(NSData *)json;
+
 @end

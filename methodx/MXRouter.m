@@ -8,6 +8,7 @@
 
 #import "MXRouter.h"
 #import "MXSelectorTargetMapping.h"
+#import "MXRequest.h"
 
 @interface MXRouter ()
 @property (nonatomic, strong) NSMutableArray *internalMappings;
@@ -62,6 +63,20 @@
   }
   
   return [mapping executeRequest:request];
+  
+}
+
+- (NSArray *) executeRequestsInJSON:(NSData *)json {
+  
+  // get the requests
+  NSArray *requests = [MXRequest requestArrayFromJSONData:json];
+  __block NSMutableArray *responses = [[NSMutableArray alloc] init];
+  
+  [requests enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [responses addObject:[self executeRequest:obj]];
+  }];
+  
+  return responses;
   
 }
 

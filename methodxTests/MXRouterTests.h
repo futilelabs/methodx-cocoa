@@ -13,7 +13,11 @@
 @interface MXRouterTests : SenTestCase
 
 @property (nonatomic) BOOL testSelectorCalled;
+@property (nonatomic) BOOL testSelector2Called;
+@property (nonatomic) BOOL testSelector3Called;
 
 - (MXResponse *) testSelector:(MXRequest *)request;
+- (MXResponse *) testSelector2:(MXRequest *)request;
+- (MXResponse *) testSelector3:(MXRequest *)request;
 
 @end

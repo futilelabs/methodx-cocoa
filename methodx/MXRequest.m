@@ -51,7 +51,7 @@
     
   }
   
-  return requests;
+  return [NSArray arrayWithArray:requests];
   
 }
 
