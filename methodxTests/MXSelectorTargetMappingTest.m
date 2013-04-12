@@ -42,7 +42,8 @@
 
 - (void) testCatchAllRequest {
   
-  MXSelectorTargetMapping *mapping = [[MXSelectorTargetMapping alloc] initWithCommand:MXMappingCatchAllCommand forSelectorName:@"*" onTarget:self];
+  MXSelectorTargetMapping *mapping = [[MXSelectorTargetMapping alloc] initWithCommand:MXMappingCatchAllCommand forSelectorName:@"catchAll" onTarget:self];
+  
   MXRequest *request = [[MXRequest alloc] initWithCommand:@"c" data:nil];
   STAssertTrue([mapping matchesRequest:request], @"matchesRequest?");
 
