@@ -1,11 +1,14 @@
 # MethodX
 
+Project status: Works but won't change the world
+
 ## What is this?
 
 MethodX is a simple routing system for mapping incoming commands to actual code.
 
-  * Take a JSON object and appropriate code in response to it
+  * Take a JSON object and run appropriate code in response to it
   * Binary data read from TCP or UDP can in turn execute code in your app
+  * Generate commands to send to other MethodX enabled services
 
 ### When is it useful?
 
@@ -19,7 +22,7 @@ MethodX is useful when:
 
 The initial version of MethodX is pretty simple; it has a _router_ class that contains various _mappings_, which will be given control of various _requests_ if they are suitable.
 
-## Usage
+## Handling incoming requests
 
 Early in your app you would do this:
 
@@ -39,7 +42,7 @@ Then wherever you are receiving commands (from HTTP, TCP, UDP or somewhere else)
     // and tell the router to execute it
     MXResponse *response = [router executeRequest:request];
     
-## JSON is supported today
+### JSON is supported today
 
 JSON message packages are supported already in the code, and follow this structure:
 
@@ -49,17 +52,17 @@ For example,
 
     { update: { id: 1, name: "Mat" } }
 
-When mapped, the above command would execute the `doUpdate` selector with `{ id: 1, name: "Mat" }` as the data.
+When mapped, the above command would execute the `doUpdate` method with `{ id: 1, name: "Mat" }` as the data.
 
-### Usage
+#### Using JSON
 
-To use the JSON capabilities, you need to have your raw JSON as an `NSData`, and then you use the `executeRequestsInJSON:` selector of the `MXRouter`.  The return value is an array of `MXResponse` objects collected by each request call (see _Multiple commands_ below.)
+To use the JSON capabilities, you need to have your raw JSON as an `NSData`, and then you use the `executeRequestsInJSON:` method of the `MXRouter`.  The return value is an array of `MXResponse` objects collected by each request call (see _Multiple commands_ below.)
 
     NSArray *responses = [router executeRequestsInJSON:rawJSONData];
 
-### Multiple commands
+#### Multiple commands
 
-Multiple commands are also supported which are just normal JSON messages inside an array.
+Multiple commands are also supported, which are just normal JSON messages inside a JSON array.
 
     [
       { "command1": {"name": "Mat"} },
@@ -73,7 +76,11 @@ Multiple commands are also supported which are just normal JSON messages inside 
 
 ### Your own stuff
 
-If you want to add something that will only be useful to you, just write a method that takes in whatever data source you need, generate all the `MXRequest` objects, and call `[MXRouter executeRequests:]`.
+If you want to add something that will only be useful to you, just write a method that takes in whatever data source you need, generates all the `MXRequest` objects, and calls `[MXRouter executeRequests:]` on them.
+
+#### Category approach
+
+We recommend writing a [category](http://mobile.tutsplus.com/tutorials/iphone/objective-c-categories/) to extend the `MXRouter` class.
 
 ### Generally useful stuff
 
