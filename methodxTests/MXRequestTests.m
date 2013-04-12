@@ -7,7 +7,7 @@
 //
 
 #import "MXRequestTests.h"
-#import "MXRequest.h"
+#import "methodx.h"
 
 @implementation MXRequestTests
 

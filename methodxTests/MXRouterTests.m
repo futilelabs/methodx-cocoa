@@ -7,10 +7,7 @@
 //
 
 #import "MXRouterTests.h"
-#import "MXRouter.h"
-#import "MXSelectorTargetMapping.h"
-#import "MXRequest.h"
-#import "MXResponse.h"
+#import "methodx.h"
 
 @implementation MXRouterTests
 

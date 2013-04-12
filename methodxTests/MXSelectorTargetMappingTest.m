@@ -7,9 +7,7 @@
 //
 
 #import "MXSelectorTargetMappingTest.h"
-#import "MXSelectorTargetMapping.h"
-#import "MXResponse.h"
-#import "MXRequest.h"
+#import "methodx.h"
 
 @implementation MXSelectorTargetMappingTest
 
