@@ -73,31 +73,4 @@
   
 }
 
-/*
-- (id) initWithJSONData:(NSData *)json {
-  
-  NSError *error = nil;
-  id data = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments error:&error];
-  
-  if (error != nil) {
-    [NSException raise:@"MXRequestBadJSON" format:@"MXRequest initWithJSONData failed: %@", error];
-  }
-  
-  NSDictionary *dictData = (NSDictionary *)data;
-  
-  // get the first key
-  NSArray *keys = [dictData allKeys];
-  
-  if ([keys count] != 1) {
-    [NSException raise:@"MXRequestBadJSON" format:@"MXRequest initWithJSONData failed: Command expected to be the only key in the object.  Got %d keys.", [keys count]];
-  }
-  
-  NSString *command = [keys objectAtIndex:0];
-  id commandData = [dictData objectForKey:command];
-    
-  return (self = [self initWithCommand:command data:commandData]);
-
-}
-*/
-
 @end
