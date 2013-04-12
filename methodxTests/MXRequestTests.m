@@ -21,4 +21,13 @@
   
 }
 
+- (void) testInitWithCommand {
+  
+  MXRequest *request = [[MXRequest alloc] initWithCommand:@"command"];
+  
+  STAssertEqualObjects(request.command, @"command", @"command");
+  STAssertEqualObjects(request.data, [MXRequest emptyData], @"data");
+  
+}
+
 @end

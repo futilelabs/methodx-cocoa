@@ -10,6 +10,12 @@
 
 @implementation MXRequest
 
+- (id) initWithCommand:(NSString *)command {
+  if (self = [self initWithCommand:command data:[MXRequest emptyData]]) {
+  }
+  return self;
+}
+
 - (id) initWithCommand:(NSString *)command data:(id)data {
   if (self = [self init]) {
     
@@ -35,6 +41,18 @@
   id commandData = [dictionary valueForKey:command];
   
   return (self = [self initWithCommand:command data:commandData]);
+  
+}
+
++ (NSDictionary *)emptyData {
+  
+  static NSDictionary *emptyData = nil;
+  
+  if (emptyData == nil) {
+    emptyData = [[NSDictionary alloc] init];
+  }
+  
+  return emptyData;
   
 }
 

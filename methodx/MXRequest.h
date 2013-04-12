@@ -10,6 +10,9 @@
 
 @interface MXRequest : NSObject
 
++ (NSDictionary *)emptyData;
+
+- (id) initWithCommand:(NSString *)command;
 - (id) initWithCommand:(NSString *)command data:(id)data;
 - (id) initWithDictionary:(NSDictionary *)dictionary;
 
