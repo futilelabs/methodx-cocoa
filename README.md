@@ -42,7 +42,7 @@ Then wherever you are receiving commands (from HTTP, TCP, UDP or somewhere else)
     // and tell the router to execute it
     MXResponse *response = [router executeRequest:request];
     
-### JSON is supported today
+## JSON support
 
 JSON message packages are supported already in the code, and follow this structure:
 
@@ -54,13 +54,13 @@ For example,
 
 When mapped, the above command would execute the `doUpdate` method with `{ id: 1, name: "Mat" }` as the data.
 
-#### Using JSON
+### Using JSON
 
 To use the JSON capabilities, you need to have your raw JSON as an `NSData`, and then you use the `executeRequestsInJSON:` method of the `MXRouter`.  The return value is an array of `MXResponse` objects collected by each request call (see _Multiple commands_ below.)
 
     NSArray *responses = [router executeRequestsInJSON:rawJSONData];
 
-#### Multiple commands
+### Multiple commands
 
 Multiple commands are also supported, which are just normal JSON messages inside a JSON array.
 
@@ -71,8 +71,12 @@ Multiple commands are also supported, which are just normal JSON messages inside
     ]
     
  The above data would cause `command1` to be executed first, followed by the other commands in the order in which they appear in the array.
+
+### Generating MethodX requests
+
+
  
-## Adding support
+## Adding other formats
 
 ### Your own stuff
 
