@@ -74,7 +74,20 @@ Multiple commands are also supported, which are just normal JSON messages inside
 
 ### Generating MethodX requests
 
+To generate MethodX requests to send to other places, you can use the `JSONDataFor*` methods on the `MXRequest` class, or the `JSONData` method on an `MXRequest` instance.
 
+The easiest way to generate the JSON to transmit for an existing `MXRequest` instance is to call the `JSONData` method:
+
+    MXRequest *request = [[MXRequest alloc] initForCommand:@"doSomething"];
+    NSData *jsonDataToTransmit = [request JSONData]; 
+ 
+If you have an array of request objects, you can use the `JSONDataForRequests:` class method:
+
+    NSData *jsonDataToTransmit = [MXRequest JSONDataForRequests:requestArray];
+ 
+You can avoid creating `MXRequest` objects by using the `JSONDataForCommand:Data:` class helper method:
+
+    NSData *jsonDataToTransmit = [MXRequest JSONDataForCommand:@"doSomething" data:someData];
  
 ## Adding other formats
 
@@ -84,7 +97,7 @@ If you want to add something that will only be useful to you, just write a metho
 
 #### Category approach
 
-We recommend writing a [category](http://mobile.tutsplus.com/tutorials/iphone/objective-c-categories/) to extend the `MXRouter` class.
+We recommend writing a [category](http://mobile.tutsplus.com/tutorials/iphone/objective-c-categories/) to extend the `MXRouter` and `MXRequest` classes.  You can see how we've done it in the [MXRequest+JSON.h](https://github.com/futilelabs/methodx-cocoa/blob/master/methodx/MXRequest%2BJSON.h) file.
 
 ### Generally useful stuff
 
