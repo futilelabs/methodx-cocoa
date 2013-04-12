@@ -68,3 +68,13 @@ Multiple commands are also supported which are just normal JSON messages inside 
     ]
     
  The above data would cause `command1` to be executed first, followed by the other commands in the order in which they appear in the array.
+ 
+## Adding support
+
+### Your own stuff
+
+If you want to add something that will only be useful to you, just write a method that takes in whatever data source you need, generate all the `MXRequest` objects, and call `[MXRouter executeRequests:]`.
+
+### Generally useful stuff
+
+If you want us to add something specifically, please add an issue, or feel free to fork the repo and add your own stuff directly.  We're very open to pull requests.
