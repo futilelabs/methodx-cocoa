@@ -149,10 +149,18 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
-		058974B5171736B2007C2275 = {
+		05755F001718ADA3004776BD /* Docs */ = {
 			isa = PBXGroup;
 			children = (
 				055A691C17185B7B00D9F4B9 /* README.md */,
+			);
+			name = Docs;
+			sourceTree = "<group>";
+		};
+		058974B5171736B2007C2275 = {
+			isa = PBXGroup;
+			children = (
+				05755F001718ADA3004776BD /* Docs */,
 				058974C3171736B2007C2275 /* methodx */,
 				058974D8171736B2007C2275 /* methodxTests */,
 				058974C0171736B2007C2275 /* Frameworks */,
