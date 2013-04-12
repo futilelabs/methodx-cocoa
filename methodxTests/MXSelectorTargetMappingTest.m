@@ -40,6 +40,20 @@
   
 }
 
+- (void) testCatchAllRequest {
+  
+  MXSelectorTargetMapping *mapping = [[MXSelectorTargetMapping alloc] initWithCommand:MXMappingCatchAllCommand forSelectorName:@"*" onTarget:self];
+  MXRequest *request = [[MXRequest alloc] initWithCommand:@"c" data:nil];
+  STAssertTrue([mapping matchesRequest:request], @"matchesRequest?");
+
+  request = [[MXRequest alloc] initWithCommand:@"something" data:nil];
+  STAssertTrue([mapping matchesRequest:request], @"matchesRequest?");
+  
+  request = [[MXRequest alloc] initWithCommand:@"anything" data:nil];
+  STAssertTrue([mapping matchesRequest:request], @"matchesRequest?");
+
+}
+
 - (MXResponse *) testSelector:(MXRequest *)request {
   self.testSelectorCalled = YES;
   return self.testResponse;

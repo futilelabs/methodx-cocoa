@@ -24,7 +24,7 @@
 }
 
 - (BOOL)matchesRequest:(MXRequest *)request {
-  return [self.command isEqualToString:request.command];
+  return [self.command isEqualToString:request.command] || [self.command isEqualToString:MXMappingCatchAllCommand];
 }
 
 - (MXResponse *)executeRequest:(MXRequest *)request {

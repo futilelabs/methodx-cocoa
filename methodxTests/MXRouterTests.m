@@ -48,15 +48,25 @@
   
   MXSelectorTargetMapping *mapping1 = [[MXSelectorTargetMapping alloc] initWithCommand:@"1" forSelectorName:@"selector" onTarget:self];
   MXSelectorTargetMapping *mapping2 = [[MXSelectorTargetMapping alloc] initWithCommand:@"2" forSelectorName:@"selector" onTarget:self];
+  MXSelectorTargetMapping *catchallMapping = [[MXSelectorTargetMapping alloc] initWithCommand:@"*" forSelectorName:@"selector" onTarget:self];
   
   [router addMapping:mapping1];
   [router addMapping:mapping2];
+  [router addMapping:catchallMapping];
 
   MXSelectorTargetMapping *command1 = [router firstMappingForRequest:[[MXRequest alloc] initWithCommand:@"1" data:nil]];
   STAssertEqualObjects(command1, mapping1, @"command1");
 
   MXSelectorTargetMapping *command2 = [router firstMappingForRequest:[[MXRequest alloc] initWithCommand:@"2" data:nil]];
   STAssertEqualObjects(command2, mapping2, @"command2");
+
+  // test the catch-all special command "*"
+  
+  MXSelectorTargetMapping *command3 = [router firstMappingForRequest:[[MXRequest alloc] initWithCommand:@"3" data:nil]];
+  STAssertEqualObjects(command3, catchallMapping, @"catchallMapping");
+
+  MXSelectorTargetMapping *command4 = [router firstMappingForRequest:[[MXRequest alloc] initWithCommand:@"random" data:nil]];
+  STAssertEqualObjects(command4, catchallMapping, @"catchallMapping");
 
 }
 

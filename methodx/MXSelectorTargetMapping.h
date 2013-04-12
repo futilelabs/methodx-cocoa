@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MXMapping.h"
 
+#define MXMappingCatchAllCommand @"*"
+
 @interface MXSelectorTargetMapping : NSObject<MXMapping>
 
 - (id) initWithCommand:(NSString *)commandName forSelectorName:(NSString *)selectorName onTarget:(id)target;
