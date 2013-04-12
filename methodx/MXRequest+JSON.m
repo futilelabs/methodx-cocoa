@@ -10,22 +10,44 @@
 
 @implementation MXRequest (JSON)
 
-+ (NSData *)JSONDataFromCommand:(NSString *)command andData:(id)data {
++ (NSData *)JSONDataForRequests:(NSArray *)requests {
   
-  NSDictionary *commandObject = [[NSDictionary alloc] initWithObjectsAndKeys:data, command, nil];
+  __block NSMutableData *jsonArrayData = [[NSMutableData alloc] init];
   
-  if (![NSJSONSerialization isValidJSONObject:commandObject]) {
+  [jsonArrayData appendData:[@"[" dataUsingEncoding:NSUTF8StringEncoding]];
+  
+  [requests enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [jsonArrayData appendData:[(MXRequest*)obj JSONData]];
+  }];
+  
+  [jsonArrayData appendData:[@"]" dataUsingEncoding:NSUTF8StringEncoding]];
+  
+  return jsonArrayData;
+  
+}
+
++ (NSData *)generateJSONFromObject:(id)object {
+  
+  if (![NSJSONSerialization isValidJSONObject:object]) {
     [NSException raise:@"MethodXBadObjectForJSON" format:@"The specified command and data combination produces an unacceptable JSON object.  isValidJSONObject returned NO.  Make sure the [NSJSONSerialization isValidJSONObject:] guidelines are followed."];
   }
   
   NSError *jsonError = nil;
-  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:commandObject options:(NSJSONWritingOptions)0 error:&jsonError];
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object options:(NSJSONWritingOptions)0 error:&jsonError];
   
   if (jsonError != nil) {
     [NSException raise:@"MethodXBadObjectForJSON" format:@"The specified command and data combination produces an unacceptable JSON object. [NSJSONSerialization dataWithJSONObject:] returned an error.  Make sure the [NSJSONSerialization isValidJSONObject:] guidelines are followed."];
   }
   
   return jsonData;
+
+}
+
++ (NSData *)JSONDataForCommand:(NSString *)command andData:(id)data {
+  
+  NSDictionary *commandObject = [[NSDictionary alloc] initWithObjectsAndKeys:data, command, nil];
+  
+  return [self generateJSONFromObject:commandObject];
   
 }
 
@@ -66,7 +88,7 @@
 
 
 - (NSData *)JSONData {
-  return [MXRequest JSONDataFromCommand:self.command andData:self.data];
+  return [MXRequest JSONDataForCommand:self.command andData:self.data];
 }
 
 @end

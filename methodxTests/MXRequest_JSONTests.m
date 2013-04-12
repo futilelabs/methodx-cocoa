@@ -40,19 +40,35 @@
   
 }
 
-- (void) testJSONDataFromCommandAndData {
+- (void) testJSONDataForCommandAndData {
   
   // make some test objects
   NSString *command = @"command";
   NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:@"Mat", @"name", [NSNumber numberWithInt:30], @"age", nil];
   
   // get the JSON data
-  NSData *json = [MXRequest JSONDataFromCommand:command andData:data];
+  NSData *json = [MXRequest JSONDataForCommand:command andData:data];
   
   // get the JSON string
   NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
   
   STAssertTrue([jsonString isEqualToString:@"{\"command\":{\"age\":30,\"name\":\"Mat\"}}"], @"JSON string");
+  
+}
+
+- (void) testJSONDataForRequests {
+  
+  NSDictionary *someData = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mat", @"name", nil];
+  
+  NSMutableArray *requests = [[NSMutableArray alloc] init];
+  [requests addObject:[[MXRequest alloc] initWithCommand:@"command1" data:someData]];
+  [requests addObject:[[MXRequest alloc] initWithCommand:@"command2" data:someData]];
+  [requests addObject:[[MXRequest alloc] initWithCommand:@"command3" data:someData]];
+  
+  NSData *json = [MXRequest JSONDataForRequests:requests];
+  NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+
+  STAssertTrue([jsonString isEqualToString:@"[{\"command1\":{\"name\":\"Mat\"}}{\"command2\":{\"name\":\"Mat\"}}{\"command3\":{\"name\":\"Mat\"}}]"], @"JSON string");
   
 }
 

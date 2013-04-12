@@ -12,7 +12,9 @@
 
 + (NSArray *)requestArrayFromJSONData:(NSData *)json;
 
-+ (NSData *)JSONDataFromCommand:(NSString *)command andData:(id)data;
++ (NSData *)JSONDataForCommand:(NSString *)command andData:(id)data;
+
++ (NSData *)JSONDataForRequests:(NSArray *)requests;
 
 - (NSData *)JSONData;
 
