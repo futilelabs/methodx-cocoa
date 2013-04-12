@@ -1,15 +1,13 @@
 //
-//  MXResponse.h
+//  MXResponseTests.h
 //  methodx
 //
 //  Created by Mat Ryer on 11/04/2013.
 //  Copyright (c) 2013 futilegames.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface MXResponse : NSObject
-
-+ (MXResponse *) okResponse;
+@interface MXResponseTests : SenTestCase
 
 @end
