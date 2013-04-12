@@ -9,6 +9,10 @@
 #ifndef methodx_Macros_h
 #define methodx_Macros_h
 
+/**
+ SuppressPerformSelectorLeakWarning suppresses the warning about calling
+ unknown selectors on objects.
+ */
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
 _Pragma("clang diagnostic push") \

@@ -10,6 +10,9 @@
 
 @interface MXRouter (JSON)
 
+/**
+ Executes the requests from the specified JSON NSData.
+ */
 - (NSArray *) executeRequestsInJSON:(NSData *)json;
 
 @end
