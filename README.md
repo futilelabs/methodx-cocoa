@@ -22,6 +22,31 @@ MethodX is useful when:
 
 The initial version of MethodX is pretty simple; it has a _router_ class that contains various _mappings_, which will be given control of various _requests_ if they are suitable.
 
+## Get started
+
+You can install MethodX using [CocoaPods](http://cocoapods.org/):
+
+#### 1. Create a new file in your project's root directory called `podfile`
+
+  * A blank text file is fine
+
+#### 2. Add the `MethodX` dependency
+
+For example:
+
+    platform :ios , '6.0'
+    pod 'MethodX', :git => "git@github.com:futilelabs/methodx-cocoa.git"
+    
+#### 3. Install dependencies with pod install
+
+In terminal, do:
+
+    pod install
+
+#### 4. Open the new workspace
+
+#### 5. Use `#import "MethodX.h"` wherever you need MethodX
+
 ## Handling incoming requests
 
 Early in your app you would do this:
