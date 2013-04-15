@@ -50,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05060F92171C7AD3007604A1 /* methodx.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = methodx.podspec; sourceTree = "<group>"; };
 		055A69141717A29500D9F4B9 /* MXRequestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRequestTests.h; sourceTree = "<group>"; };
 		055A69151717A29500D9F4B9 /* MXRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRequestTests.m; sourceTree = "<group>"; };
 		055A69171717A88700D9F4B9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 				058974D8171736B2007C2275 /* methodxTests */,
 				058974C0171736B2007C2275 /* Frameworks */,
 				058974BF171736B2007C2275 /* Products */,
+				05060F92171C7AD3007604A1 /* methodx.podspec */,
 			);
 			sourceTree = "<group>";
 		};

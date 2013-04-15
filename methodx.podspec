@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.8'
 
-  s.source_files = 'methodx-cocoa', 'methodx-cocoa/**/*.{h,m}'
+  s.source_files = 'methodx', 'methodx/**/*.{h,m}'
 
-  s.public_header_files = 'methodx-cocoa/**/*.h'
+  s.public_header_files = 'methodx/**/*.h'
 
   s.osx.frameworks = 'Cocoa'
   s.ios.frameworks = 'Foundation'
