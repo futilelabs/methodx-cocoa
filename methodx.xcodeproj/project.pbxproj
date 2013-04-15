@@ -55,7 +55,7 @@
 		055A69171717A88700D9F4B9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		055A69181717B1A700D9F4B9 /* MXResponseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXResponseTests.h; sourceTree = "<group>"; };
 		055A69191717B1A700D9F4B9 /* MXResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXResponseTests.m; sourceTree = "<group>"; };
-		055A691B1718591B00D9F4B9 /* methodx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = methodx.h; sourceTree = "<group>"; };
+		055A691B1718591B00D9F4B9 /* MethodX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodX.h; sourceTree = "<group>"; };
 		055A691C17185B7B00D9F4B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		055A691E17189A0800D9F4B9 /* MXRequest+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXRequest+JSON.h"; sourceTree = "<group>"; };
 		055A691F17189A0800D9F4B9 /* MXRequest+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXRequest+JSON.m"; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				055A691D171899EE00D9F4B9 /* Formats */,
-				055A691B1718591B00D9F4B9 /* methodx.h */,
+				055A691B1718591B00D9F4B9 /* MethodX.h */,
 				055A69171717A88700D9F4B9 /* Macros.h */,
 				058974F21717378F007C2275 /* MXMapping.h */,
 				058974C4171736B2007C2275 /* Supporting Files */,
